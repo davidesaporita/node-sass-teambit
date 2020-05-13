@@ -1,0 +1,19 @@
+.navbar {
+    @include flex-jcc-aic;
+    height: $nav-height-mobile;
+    padding-left: 25px;
+    padding-right: 25px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.2);
+    .menu {
+        &__hamburger {
+            margin-right: 5px;
+            font-size: 22px;
+        }
+        &__mobile {
+            display: none;
+        }
+        &__desktop {
+            display: none;
+        }
+    }
+}

@@ -6,12 +6,68 @@ a:hover {
   color: #58402c;
 }
 
-* {
-  font-family: "PT Sans", sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #58402c;
 }
 
 h1 {
-  color: red;
+  font-size: 50px;
+}
+
+.fas {
+  color: #58402c;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 55px;
+  padding-left: 25px;
+  padding-right: 25px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .menu__hamburger {
+  margin-right: 5px;
+  font-size: 22px;
+}
+
+.navbar .menu__mobile {
+  display: none;
+}
+
+.navbar .menu__desktop {
+  display: none;
+}
+
+.jumbotron {
+  margin-top: 130px;
+  text-align: center;
+}
+
+.jumbotron img {
+  max-width: 100%;
 }
 
 
