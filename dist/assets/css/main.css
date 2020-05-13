@@ -1,3 +1,15 @@
+a,
+a:focus,
+a:visited,
+a:hover {
+  text-decoration: none;
+  color: #58402c;
+}
+
+* {
+  font-family: "PT Sans", sans-serif;
+}
+
 h1 {
   color: red;
 }

@@ -3,11 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="dist/assets/css/main.css">
     <title>Teambit.io Replica</title>
 </head>
 <body>
-    <h1>TeamBit.io</h1>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="dist/assets/img/logo.svg" alt="teambit logo">
+            </div>
+            <div class="menu">
+                <div class="hamburger"></div>
+                <div class="menu__mobile">
+                    <ul class="menu__items">
+                        <li><a href="#">Feedback</a></li>
+                        <li><a href="#">Surveys</a></li>
+                        <li><a href="#">Reviews</a></li>
+                        <li><a href="#">Praise</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Sign in</a></li>
+                        <li><a class="btn btn__signup" href="#" role="button">Sign Up</a></li>
+                    </ul>
+                </div>
+                <div class="menu__desktop">
+                    <ul class="menu__items">
+                        <li><a href="">Solutions</a>
+                            <ul class="menu__items__submenu">
+                                <li><a href="#">Feedback</a></li>
+                                <li><a href="#">Surveys</a></li>
+                                <li><a href="#">Reviews</a></li>
+                                <li><a href="#">Praise</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Pricing</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Sign in</a></li>
+                        <li><a class="btn btn__signup" href="#" role="button">Sign Up</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="jumbotron">
+            <div class="jumbotron__text">
+                <h1 class="jumbotron__title">Understand, recognize and develop your people</h1>
+                <h3 class="subtext">Teambit helps teams create a high performing culture with regular feedback.</h3>
+            </div>
+            <div class="jumbotron__img">
+                <img src="dist/assets/img/illustration-main.jpg" alt="">
+            </div>
+            <div class="jumbotron__cta">
+                <a class="btn btn__signup" href="#" role="button">Sign Up with Google</a>
+                <span>or</span>
+                <a class="btn btn__signup" href="#" role="button">Sign Up with Slack</a>
+            </div>
+            <div class="jumbotron__last">
+                <a href="#">or use your email address</a>
+            </div>
+        </section>
+    </main>
+    <footer class="footer"></footer>
     <script src="dist/scripts/main.js"></script>
 </body>
 </html>
