@@ -1,10 +1,31 @@
 .jumbotron {
     text-align: center;
+    @include padding-side;
     
     &__title {
-        padding: 130px 80px 0;
+        padding: 130px 15px 40px;
     }
-    
+
+    &__subtext {
+        font-weight: normal;
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+
+    &__cta {
+        @include flex($jc: 'center');
+        margin-bottom: 25px;
+
+        span {
+            @include padding-side(15px);
+            color: #bdb5af;
+        }
+    }
+
+    &__last {
+        margin-bottom: 25px;
+    }
+
     img {
         max-width: 100%;
     }

@@ -29,6 +29,25 @@
     }
 }
 
+@mixin padding-side($size: 25px) {
+    padding-left: $size;
+    padding-right: $size;
+}
+
+// Generals
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+// Typography
 a,
 a:focus,
 a:visited,
@@ -47,28 +66,21 @@ h6 {
 }
 
 h1 {
-    font-size: $h1-size;
+    font-size: $h1-size;    
 }
 
 .fas {
     color: $links-primary-col;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Source Sans Pro', sans-serif;
-}
-
-ul {
-    list-style: none;
-}
+// Layout
 
 .container {
     margin: 0 auto;
     max-width: 100%;
 }
+
+// Layout Responsive
 
 @media screen and (min-width: 768px) {
     .container {

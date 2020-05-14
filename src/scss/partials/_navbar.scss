@@ -1,13 +1,18 @@
 .navbar {
     @include flex($jc: 'space-between');
+    @include padding-side(25px);
     height: $nav-height-mobile;
-    padding-left: 25px;
-    padding-right: 25px;
     border-bottom: 1px solid rgba(0,0,0,.3);
+
+    .logo {
+        padding-top: 5px;
+    }
+
     .menu {
         &__hamburger {
             margin-right: 5px;
             font-size: 22px;
+            cursor: pointer;
         }
         &__mobile {
             display: none;
@@ -40,7 +45,12 @@
                 }
             }
             &__items--dropdown {
-                
+                span {
+                    margin-right: 4px;
+                }
+                i {
+                    font-size: 14px;
+                }
             }
             &__items--submenu {
                 display: none;
