@@ -1,8 +1,10 @@
 .jumbotron {
-    margin-top: 130px;
     text-align: center;
-
-
+    
+    &__title {
+        padding: 130px 80px 0;
+    }
+    
     img {
         max-width: 100%;
     }

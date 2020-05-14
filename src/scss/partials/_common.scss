@@ -1,7 +1,32 @@
-@mixin flex-jcc-aic {
+@mixin flex($dir: 'row', $jc: 'flex-start', $ai: 'center', $wrap: 'nowrap') {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
+    @if $dir == 'column' {
+        flex-direction: column;
+    } 
+    @if $dir == 'end' {
+        flex-direction: flex-end;
+    } 
+    @if $jc == 'center' {
+        justify-content: center;
+    }
+    @if $jc == 'space-between' {
+        justify-content: space-between;
+    }
+    @if $jc == 'space-around' {
+        justify-content: space-around;
+    }
+    @if $ai == 'space-between' {
+        justify-content: space-between;
+    }
+    @if $ai == 'space-around' {
+        justify-content: space-around;
+    }
+    @if $wrap == 'wrap' {
+        flex-wrap: wrap;
+    }
 }
 
 a,
@@ -33,7 +58,7 @@ h1 {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 ul {
@@ -41,5 +66,18 @@ ul {
 }
 
 .container {
-    width: 100%;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 95%;
+    } 
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 1150px;
+    } 
 }
