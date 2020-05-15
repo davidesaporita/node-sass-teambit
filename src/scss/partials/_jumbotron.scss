@@ -1,9 +1,13 @@
 .jumbotron {
-    text-align: center;
+    @include flex($jc: center, $wrap: wrap);
     @include padding-side;
+    margin-bottom: 160px;
+    text-align: center;
     
     &__title {
-        padding: 130px 15px 40px;
+        padding-top: 115px;
+        padding-left: 15px;
+        margin-bottom: 40px;
     }
 
     &__subtext {
@@ -13,10 +17,10 @@
     }
 
     &__cta {
-        @include flex($jc: 'center');
+        @include flex($jc: center);
         margin-bottom: 25px;
 
-        span {
+        & > span {
             @include padding-side(15px);
             color: #bdb5af;
         }
@@ -28,5 +32,26 @@
 
     img {
         max-width: 100%;
+    }
+}
+
+@include tablet {
+    .jumbotron {
+        @include padding-side(0);
+    }
+}
+
+@include desktop {
+    .jumbotron {
+        @include flex($jc: flex-start);
+        text-align: left;
+
+        &__title {
+            padding-left: 0px;
+        }
+
+        &__cta {
+            @include flex($jc: flex-start);
+        }
     }
 }

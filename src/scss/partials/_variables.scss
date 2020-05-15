@@ -3,7 +3,14 @@ $text-primary-col: #58402c;
 $heading-primary-col: #58402c;
 $links-primary-col: #58402c;
 $links-secondary-col: #58402c;
-$btn-secondary-Col: #ffffff;
+
+// Buttons Colors & Backgrounds
+$btn-primary-col: #30488f;
+$btn-primary-bg: #ffffff;
+$btn-primary-hover-bg: #233569;
+$btn-secondary-col: #ffffff;
+$btn-secondary-bg: #30488f;
+$btn-secondary-hover-bg: #233569;
 
 // font sizing
 $size-base: 18px;
@@ -11,4 +18,4 @@ $h1-size: 50px;
 
 // Measures
 $nav-height-mobile: 55px;
-$nav-height-desktop: 75px;
+$nav-height-break-768: 75px;

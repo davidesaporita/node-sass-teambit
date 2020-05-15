@@ -1,32 +1,10 @@
-@mixin flex($dir: 'row', $jc: 'flex-start', $ai: 'center', $wrap: 'nowrap') {
+@mixin flex($dir: row, $jc: flex-start, $ai: center, $wrap: nowrap, $flex-basis: auto) {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    @if $dir == 'column' {
-        flex-direction: column;
-    } 
-    @if $dir == 'end' {
-        flex-direction: flex-end;
-    } 
-    @if $jc == 'center' {
-        justify-content: center;
-    }
-    @if $jc == 'space-between' {
-        justify-content: space-between;
-    }
-    @if $jc == 'space-around' {
-        justify-content: space-around;
-    }
-    @if $ai == 'space-between' {
-        justify-content: space-between;
-    }
-    @if $ai == 'space-around' {
-        justify-content: space-around;
-    }
-    @if $wrap == 'wrap' {
-        flex-wrap: wrap;
-    }
+    flex-direction: $dir;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-basis: $flex-basis;
+    flex-wrap: $wrap;
 }
 
 @mixin padding-side($size: 25px) {
@@ -34,8 +12,35 @@
     padding-right: $size;
 }
 
-// Generals
+/* Phones (landscape phones, 576px and up) */
+@mixin mobile {
+    @media (min-width: 576px) {
+        @content;
+    }
+}
 
+/* Tablets (tablets, 768px and up) */
+@mixin tablet {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+/* Desktops (desktops, 992px and up) */
+@mixin desktop {
+    @media (min-width: 1140px) {
+        @content;
+    }
+}
+
+/* Large desktops (large desktops, 1200px and up) */
+@mixin large-desktop {
+    @media (min-width: 1400px) {
+        @content;
+    }
+}
+
+// Generals
 * {
     box-sizing: border-box;
     margin: 0;
@@ -71,6 +76,42 @@ h1 {
 
 .fas {
     color: $links-primary-col;
+}
+
+// Utilities 
+
+.btn {
+    @include flex($ai: center);
+    background-color: $btn-primary-bg;
+    height: 35px;
+    @include padding-side(10px);
+    border-radius: 6px;
+    border: 1px solid $btn-primary-col;
+    font-weight: bold;
+    font-size: 15px;
+    color: $btn-primary-col;
+    transition: color .4s,
+                background-color .4s;
+    
+    &.btn--dark {
+        @include padding-side(20px);
+        background-color: $btn-secondary-bg;
+        font-weight: normal;
+        color: $btn-secondary-col;
+        
+    }
+
+    & > img {
+        width: 18px;
+        margin-right: 5px;
+    }
+    
+    &:hover {
+        background-color: $btn-primary-hover-bg;
+        color: $btn-secondary-col;
+    }
+    
+    
 }
 
 // Layout
