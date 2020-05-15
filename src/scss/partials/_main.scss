@@ -1,0 +1,66 @@
+.content {
+    background-color: $section-secondary-bg;
+
+    &__container {
+        @include flex($dir: column, $jc: center);
+        @include padding-side(25px);
+        width: 1150px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    &__title {
+        padding-top: 70px;
+        padding-bottom: 70px;
+        text-align: center;
+    }
+
+    &__row {
+        @include flex($dir: column, $jc: center);
+        width: 860px;
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    &__col {
+        text-align: center;
+        &--third {
+            width: 200px;
+            margin-bottom: 55px;
+            img {
+                max-width: 200px;
+                max-height: 150px;
+                margin-bottom: 20px;
+            }
+        }
+        
+        &--full {
+            width: 300px;
+            img {
+                max-width: 90%;
+            }
+        }
+    }
+
+    &__subtext {
+        font-size: 18px;
+    }
+
+    &__line {
+        margin-top: 80px;
+        margin-bottom: 50px;
+        width: 100%;
+        color: #bdb5af;
+    }
+
+}
+
+@include tablet {
+    .content {
+        &__container {
+            width: 1150px;
+        }
+        &__row {
+            @include flex($jc: space-around, $flex-basis: 100% / 3);
+        }
+    }
+}
